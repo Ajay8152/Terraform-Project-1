@@ -32,7 +32,7 @@ Here is a detailed explanation of each resource and its use in this project:
 ==> The route 0.0.0.0/0 means that all traffic should go through the Internet Gateway to reach the internet.
 ==> Route Table Association: This connects the public subnet to the route table, allowing EC2 instances in the public subnet to access the internet.
 
-4. EC2 Instance (ec2.tf)
+3. EC2 Instance (ec2.tf)
 ==> EC2 Instance: This is an AWS virtual machine (VM). In this project, the EC2 instance is configured to run a basic NGINX web server.
 ==> AMI: Amazon Machine Image (AMI) specifies the base operating system for the EC2 instance (ami-0327f51db613d7bd2 is a pre-configured Amazon Linux AMI).
 ==> Instance Type: The EC2 instance is of type t2.micro, which is eligible for the AWS free tier.
@@ -45,7 +45,7 @@ sudo systemctl start nginx
 
 ==> Security Group: It is associated with the nginx-sg security group that allows HTTP traffic on port 80.
 
-6. Security Group (security-groups.tf)
+4. Security Group (security-groups.tf)
    
 ==> Security Group: This acts as a virtual firewall for the EC2 instance, controlling inbound and outbound traffic.
 
@@ -55,7 +55,7 @@ sudo systemctl start nginx
 
 ==> Security Group: It is associated with the nginx-sg security group that allows HTTP traffic on port 80.
 
-8. Outputs (outputs.tf)
+5. Outputs (outputs.tf)
    
 ==> Outputs: The outputs section is used to display useful information after the infrastructure is created.
 ==> instance_public_ip: Displays the public IP address of the EC2 instance, which can be used to access the NGINX server.
