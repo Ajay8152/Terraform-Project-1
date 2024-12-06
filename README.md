@@ -1,4 +1,4 @@
-# Terraform-Projects
+# Terraform-Project
 
 Project Explanation: AWS VPC and EC2 with Terraform
 
